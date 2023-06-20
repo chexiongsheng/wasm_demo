@@ -1,0 +1,11 @@
+(module
+  (global $externref_global (mut externref) (ref.null extern))
+  (func $set_externref (param $0 externref)
+    (global.set $externref_global (local.get $0))
+  )
+  (func $get_externref (result externref)
+    (global.get $externref_global)
+  )
+  (export "set_externref" (func $set_externref))
+  (export "get_externref" (func $get_externref))
+)

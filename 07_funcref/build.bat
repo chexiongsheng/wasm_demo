@@ -1,0 +1,1 @@
+call emcc --no-entry -O3 funcref_example.c funcref_example.support.S -o funcref_example.wasm -s EXPORTED_FUNCTIONS="['_setTimeoutByCFunc']" -mreference-types -s WARN_ON_UNDEFINED_SYMBOLS=0
